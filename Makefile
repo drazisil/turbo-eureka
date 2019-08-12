@@ -2,4 +2,7 @@ init:
 	pyenv local 3.7.4
 	pip install -r requirements.txt
 
-.PHONY: init
+test:
+	pytest
+
+.PHONY: init test

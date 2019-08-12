@@ -1,3 +1,7 @@
+def say_hello():
+    return 'Like an onion.'
+
+
 if __name__ == "__main__":
-    print("Like an onion.")
+    print(say_hello())
     pass
