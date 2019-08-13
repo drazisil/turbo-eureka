@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import os
+from lib_object import LibObject
 
 parser = argparse.ArgumentParser(description='Peel a file.')
 parser.add_argument('file_path', help='the file path to act on')
@@ -39,4 +40,5 @@ if __name__ == "__main__":
         print('File {} not found, please check it exists.'.format(
             args.file_path))
         quit(-1)
-    print(is_ar_archive(file_sig))
+    if is_ar_archive(file_sig):
+        lib = LibObject()
