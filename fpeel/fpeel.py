@@ -31,7 +31,7 @@ def say_hello():
     return 'Like an onion.'
 
 
-if __name__ == "__main__":
+def main():
     print(say_hello())
     args = parser.parse_args()
     try:
@@ -42,3 +42,7 @@ if __name__ == "__main__":
         quit(-1)
     if is_ar_archive(file_sig):
         lib = LibObject()
+
+
+if __name__ == "__main__":
+    main()
