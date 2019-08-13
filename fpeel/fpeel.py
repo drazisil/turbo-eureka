@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import os
-from lib_object import LibObject
+from .lib_object import LibObject
 
 parser = argparse.ArgumentParser(description='Peel a file.')
 parser.add_argument('file_path', help='the file path to act on')

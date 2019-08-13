@@ -1,10 +1,13 @@
 init:
 	pyenv local 3.7.4
 
+run:
+	python -m fpeel.fpeel --
+
 deps:
 	pip install -r requirements.txt
 
 test:
-	pytest
+	python -m pytest
 
-.PHONY: init deps test
+.PHONY: init run deps test
