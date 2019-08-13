@@ -1,4 +1,4 @@
-from fpeel.fpeel import is_ar_archive, say_hello
+from fpeel.main import is_ar_archive, say_hello
 
 
 def test_is_ar_archive_passes():
