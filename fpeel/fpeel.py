@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import argparse
 import os
 from .lib_object import LibObject
