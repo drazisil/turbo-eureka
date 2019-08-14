@@ -33,11 +33,12 @@ def say_hello():
 def main():
     print(say_hello())
     args = parser.parse_args()
+    filename = args.file_path
     try:
-        file_sig = get_file_sig(args.file_path, 8)
+        file_sig = get_file_sig(filename, 8)
     except FileNotFoundError as e:
-        print('File {} not found, please check it exists.'.format(
-            args.file_path))
+        print('File {} not found, please check it exists.'.format(afilername))
         quit(-1)
     if is_ar_archive(file_sig):
-        lib = LibObject()
+        lib = LibObject(filename)
+        lib._dump()
