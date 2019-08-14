@@ -11,27 +11,23 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Install tox
+          command: sudo pip install tox
+
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
 
       - run:
-          name: install dependencies
+          name: run tests
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            make deps
+            tox
 
       - save_cache:
           paths:
-            - ./venv
+            - ./tox
           key: v1-dependencies-{{ checksum "requirements.txt" }}
-
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            make test
 
       - run:
           name: upload coverage

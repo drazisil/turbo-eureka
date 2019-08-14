@@ -4,9 +4,13 @@
 
 # Installing
 
-- `make init`
-- `make deps`
+- Clone the project
+- `pip install -r requirements.txt`
 
 # Running
 
 - `bin/fpeel <file_path>`
+
+# Testing
+
+- `tox`
