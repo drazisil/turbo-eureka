@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: Install tox
-          command: pip install tox
+          command: sudo pip install tox
 
       - restore_cache:
           keys:
