@@ -41,7 +41,3 @@ def main():
         quit(-1)
     if is_ar_archive(file_sig):
         lib = LibObject()
-
-
-if __name__ == "__main__":
-    main()
